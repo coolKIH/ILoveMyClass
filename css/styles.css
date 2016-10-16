@@ -3,8 +3,6 @@ body{
     height:3402px;
     margin: auto;
     padding:0 0;
-    font-family: "Ubuntu Mono";
-    
 }
 body * {
     margin: 0 0;
@@ -73,7 +71,6 @@ div.header div.title-container div.title-wrapper:after{
 div.content{
     height: 75%;
     width: 100%;
-    background:url("../assets/imgs/bg_348075.png") repeat;
 }
 div.footer{
     height: 5%;
@@ -94,11 +91,16 @@ div.block div.leftpart, div.block div.rightpart {
     position: relative;
 }
 
-div.block:nth-child(even){
-    background-color: #EDD892;
-    box-shadow: 0px 0px 10px #111;
-    border-radius: 50px 50px 0 0;
+
+
+div.block:nth-child(even) div.leftpart, div.block:nth-child(odd) div.rightpart {
+    background:linear-gradient(180deg, greenyellow,#FFE74C) repeat;
 }
+
+div.block:nth-child(odd) div.leftpart, div.block:nth-child(even) div.rightpart {
+    background:linear-gradient(180deg,#56E39F,yellowgreen) repeat;
+}
+
 
 div.block{
     float: left;
@@ -108,6 +110,7 @@ div.block div.centerpart{
     width: 20%;
     height: 100%;
     position: relative;
+    background:linear-gradient(180deg, greenyellow,#FFE74C) repeat;
 }
 
 div.block div{
@@ -157,7 +160,7 @@ div.block img{
 }
 
 div.block:nth-child(1) img{
-    transform: rotateZ(5deg);
+    transform: rotateZ(5deg) translateX(-40px) translateY(25px);
     transform-origin: right bottom;
 }
 div.block:nth-child(2) img{
@@ -193,7 +196,6 @@ div.leftpart.intro:before{
     content: "WE";
     position: absolute;
     font-size: 9em;
-    background:rgba(255,255,0,0.3);
     color: rgba(255,0,0,0.5);
     display: inline-block;
     z-index: 5;
@@ -201,30 +203,48 @@ div.leftpart.intro:before{
     left: 85%;
     transform:translateX(-50%) translateY(-50%);
     border-radius: 50%;
+    font-family:"Comic Sans MS";
 }
 div.leftpart.study:after{
     content:"ARE";
     position: absolute;
     font-size: 10em;
-    background:rgba(255,255,0,0.5);
     color: rgba(255,0,0,0.7);
     bottom: 0;
     right: 0;
     border-radius: 45% 45%;
     transform:translateX(30px) translateY(30px);
-    z-index:10
+    z-index:10;
+    font-family:"Comic Sans MS";
 }
 div.footer span{
     display: inline-block;
     position: relative;
     top: 50%;
     left: 50%;
-    font-size: 4em;
+    font-size: 4.2em;
+    font-weight: bold;
     transform:translateY(-50%) translateX(-50%);
-    color: dodgerblue;
-    background-color:rgba(255,255,0,0.99) ;
-    border-radius: 15px;
-    padding: 10px 20px;
-    text-shadow: 0 0 5px dodgerblue;
-    box-shadow: 8px 5px 10px #000;
+    -moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));
+    background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+    background-color:#007dc1;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    border:1px solid #124d77;
+    display:inline-block;
+    cursor:pointer;
+    color:#333333;
+    font-family:Arial;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #154682;
+    padding:22px 35px;
 }
